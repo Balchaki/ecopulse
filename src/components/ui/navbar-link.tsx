@@ -10,7 +10,8 @@ interface NavbarLinkProps{
 
 const NavLink = styled.a`
     font-family: inherit;
-    color: var(--nav-link-background);
+    // @ts-ignore
+    color: ${(props) => (props.$active ? "var(--nav-link-active)" : "var(--nav-link-background)")};
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -22,13 +23,11 @@ const NavLink = styled.a`
         color: var(--nav-link-hover);
     }
     
-    &:active{
-        color: var(--nav-link-active);
-    }
 `
 
 export default function NavbarLink(props: NavbarLinkProps){
     return(
-        <NavLink href={props.path} >{props.text}</NavLink>
+        // @ts-ignore
+        <NavLink href={props.path} $active={props.active}>{props.text}</NavLink>
     )
 }
