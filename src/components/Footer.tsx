@@ -23,10 +23,22 @@ const FooterLogo = styled.a`
     align-items: center;
 `
 
+const CoprightText = styled.a`
+    color: #999;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    position: absolute;
+    right: 59px;
+`
+
 export default function FooterComponent(){
     return(
         <FooterGroup>
-            <FooterLogo><LogoMin/>      EcoPulse</FooterLogo>
+            <FooterLogo><LogoMin/> EcoPulse</FooterLogo>
+            <CoprightText>© 2024 EcoPulse. Todos os direitos reservados.</CoprightText>
         </FooterGroup>
     );
 }

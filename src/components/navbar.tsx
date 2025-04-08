@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import LogoMin from "@/components/icons/logo-min";
 import NavbarLink from "@/components/ui/navbar-link";
+import { usePathname } from "next/navigation";
 
 const NavGroup = styled.nav`
     height: var(--nav-height);
@@ -23,21 +24,29 @@ const NavLogo = styled.a`
     display: flex;
     align-items: center;
     text-decoration: none;
+    
 `
 
 const LinkContainer = styled.div`
     position: absolute;
     right: 66px;
 `
-
+const navLinks = [
+    { text: "Home", path: "/" },
+    { text: "Sobre", path: "/about" },
+    { text: "Serviços", path: "/services" },
+    { text: "Contato", path: "/contact" },
+]
 
 export default function NavComponent() {
+    const pathname = usePathname();
     return(
         <NavGroup>
             <NavLogo href={"/"}><LogoMin></LogoMin>EcoPulse</NavLogo>
             <LinkContainer>
-                <NavbarLink text={"Contato"} path={"/contact"}></NavbarLink>
-                <NavbarLink text={"Contato"} path={"/contact"}></NavbarLink>
+                {navLinks.map((link, index) => (
+                    <NavbarLink key={index} text={link.text} path={link.path} active={pathname === link.path} />
+                ))}
             </LinkContainer>
         </NavGroup>
     );
