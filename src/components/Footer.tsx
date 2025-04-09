@@ -30,15 +30,16 @@ const CoprightText = styled.a`
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    position: absolute;
-    right: 59px;
+    
+    margin-left: auto;
+    margin-right: 59px;
 `
 
 export default function FooterComponent(){
     return(
         <FooterGroup>
             <FooterLogo><LogoMin/> EcoPulse</FooterLogo>
-            <CoprightText>© 2024 EcoPulse. Todos os direitos reservados.</CoprightText>
+            <CoprightText>© 2025 EcoPulse. Todos os direitos reservados.</CoprightText>
         </FooterGroup>
     );
 }

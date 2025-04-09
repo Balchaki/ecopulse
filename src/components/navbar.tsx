@@ -28,8 +28,8 @@ const NavLogo = styled.a`
 `
 
 const LinkContainer = styled.div`
-    position: absolute;
-    right: 66px;
+    margin-left: auto;
+    margin-right: 66px;
 `
 const navLinks = [
     { text: "Home", path: "/" },
