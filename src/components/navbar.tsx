@@ -34,7 +34,7 @@ const LinkContainer = styled.div`
 const navLinks = [
     { text: "Home", path: "/" },
     { text: "Sobre", path: "/about" },
-    { text: "Serviços", path: "/services" },
+    { text: "Soluções", path: "/solutions" },
     { text: "Contato", path: "/contact" },
 ]
 

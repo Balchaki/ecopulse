@@ -28,7 +28,7 @@ const Subtitle = styled.h4`
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 27px; /* 150% */
+    line-height: 27px;
 `
 const StartButton = styled.button`
     width: 186px;
@@ -51,6 +51,8 @@ const HomeLogo = styled.img`
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 `
+
+
 export default function Home() {
     return (
         <div className={styles.page}>
