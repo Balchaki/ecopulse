@@ -15,9 +15,13 @@ line-height: 54px;
 margin-top: 41px;
 `
 const CardContainer = styled.div`
-display:flex;
-flex-direction: row-reverse;
-margin-left: 33px;
+    margin-top: 48px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    flex-direction: row;
+
 `
 
 

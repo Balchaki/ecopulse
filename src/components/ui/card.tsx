@@ -16,7 +16,8 @@ box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10), 0px 0px 0px 0px rgba(0, 0, 0, 
 width: 560px;
 height: 164px;
 flex-shrink: 0;
-margin-left: 63px;
+margin-left: 40px;
+margin-right: 50px;
 padding-left: 32px;
 padding-top: 32px;
 padding-right: 44px;
