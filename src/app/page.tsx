@@ -39,6 +39,11 @@ const StartButton = styled.button`
     background: #2E7D32;
     margin-top: 31px;
     color: white;
+    
+    &:hover{
+        background: #205823;
+        border-color: transparent;
+    }
 `
 
 const LogoContainer = styled.div`
