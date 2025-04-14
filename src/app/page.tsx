@@ -40,14 +40,19 @@ const StartButton = styled.button`
     margin-top: 31px;
     color: white;
 `
+
+const LogoContainer = styled.div`
+    display:flex;
+    margin-left:auto;
+    margin-right: 5%
+`
 const HomeLogo = styled.img`
     width: 552px;
     height: 368px;
     flex-shrink: 0;
     
-    margin-left: 188px;
     margin-top: 79px;
-
+    
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 `
@@ -65,7 +70,9 @@ export default function Home() {
                         <Subtitle>Monitore e otimize seu consumo de energia com tecnologia IoT e Inteligência Artificial</Subtitle>
                         <StartButton>Comece Agora</StartButton>
                     </TextContainer>
-                    <HomeLogo src={"/logo-home.png"}></HomeLogo>
+                    <LogoContainer>
+                        <HomeLogo src={"/logo-home.png"}></HomeLogo>
+                    </LogoContainer>
                 </HomeContainer>
 
             </main>
