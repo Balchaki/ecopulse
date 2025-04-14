@@ -22,7 +22,7 @@ export default function ContactPage() {
             placeholder="Sua mensagem"
             className={styles.textarea}
           ></textarea>
-          <button type="button" className={styles.button}>
+          <button type="submit" className={styles.button}>
             Enviar
           </button>
         </form>
