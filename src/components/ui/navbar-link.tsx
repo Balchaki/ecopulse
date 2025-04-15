@@ -1,6 +1,7 @@
 "use client"
 
 import styled from "styled-components";
+import Link from "next/link";
 
 interface NavbarLinkProps{
     text: string,
@@ -8,26 +9,35 @@ interface NavbarLinkProps{
     active: boolean
 }
 
-const NavLink = styled.a`
+interface StyledLinkProps {
+    $active: boolean;
+}
+
+const NavLink = styled(Link)<StyledLinkProps>`
+    color: ${props => props.$active ? "var(--nav-link-active)" : "var(--nav-link-background)"};
     font-family: inherit;
-    // @ts-ignore
-    color: ${(props) => (props.$active ? "var(--nav-link-active)" : "var(--nav-link-background)")};
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: ${props => props.$active ? '700' : '400'};
     line-height: 24px;
-    text-decoration:none;
-    padding-right: 31px;
-    
-    &:hover{
-        color: var(--nav-link-hover);
+    margin-left: 32px;
+    text-decoration: none;
+
+    @media (max-width: 768px) {
+        margin-left: 20px;
+        font-size: 14px;
     }
-    
+
+    @media (max-width: 480px) {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
 `
 
 export default function NavbarLink(props: NavbarLinkProps){
     return(
-        // @ts-ignore
-        <NavLink href={props.path} $active={props.active}>{props.text}</NavLink>
+        <NavLink href={props.path} $active={props.active}>
+            {props.text}
+        </NavLink>
     )
 }

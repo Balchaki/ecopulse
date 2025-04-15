@@ -5,15 +5,27 @@ import LogoMin from "@/components/icons/logo-min";
 
 const FooterGroup = styled.footer`
     background: var(--footer-background);
-    height: var(--footer-height);
-    padding-left: 60px;
-    padding-top: 0.5%;
+    min-height: var(--footer-height);
+    padding: 20px 60px;
     display: flex;
     align-items: center;
+
+    @media (max-width: 768px) {
+        padding: 20px 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @media (max-width: 480px) {
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
 `
 
 const FooterLogo = styled.a`
-    color:white;
+    color: white;
     font-family: inherit;
     font-size: 24px;
     font-style: normal;
@@ -21,25 +33,41 @@ const FooterLogo = styled.a`
     line-height: 36px;
     display: flex;
     align-items: center;
+    text-decoration: none;
+
+    @media (max-width: 480px) {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
 `
 
-const CoprightText = styled.a`
+const CopyrightText = styled.div`
     color: #999;
     font-family: inherit;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    
     margin-left: auto;
-    margin-right: 59px;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    @media (max-width: 480px) {
+        margin-left: 0;
+        font-size: 12px;
+        line-height: 18px;
+    }
 `
 
 export default function FooterComponent(){
     return(
         <FooterGroup>
             <FooterLogo><LogoMin/> EcoPulse</FooterLogo>
-            <CoprightText>© 2025 EcoPulse. Todos os direitos reservados.</CoprightText>
+            <CopyrightText>© 2025 EcoPulse. Todos os direitos reservados.</CopyrightText>
         </FooterGroup>
     );
 }
